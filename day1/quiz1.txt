@@ -6,3 +6,4 @@ JAVA - Day 1 Quiz
 3. Runtime Environment 
 4. Standard Library
 5. JVM means Java Virtual Machine
+6. Java is portable due to its Runtime Environment
