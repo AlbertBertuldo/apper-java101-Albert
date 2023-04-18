@@ -2,7 +2,7 @@ Albert
 JAVA - Day 1 Quiz
 
 1. Java Development Kit
-2. Java Virtual Machine (JVM)
-3. Java Runtime Environment (JRE)
-4. Java Development Kit (JDK)
+2. Programming Language
+3. Runtime Environment 
+4. Standard Library
 5. JVM means Java Virtual Machine
