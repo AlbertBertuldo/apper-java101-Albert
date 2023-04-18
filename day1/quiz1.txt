@@ -9,3 +9,9 @@ JAVA - Day 1 Quiz
 6. Java is portable due to its Runtime Environment
 7. False
 8. JAVA_HOME
+
+for 9 and 10:
+
+    public static void main(String[] args) {
+        System.out.println("Hello World, Albert!");
+    }
