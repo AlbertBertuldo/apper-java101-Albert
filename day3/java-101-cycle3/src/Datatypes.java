@@ -30,6 +30,10 @@ public class Datatypes {
         System.out.println(w_name); //default value for wrapper is null, even though it is a string
 //
 //        pass by value = non primiticve, wrapper
+        displayAgeInAFancyWay(age);
+
+
+
 //        pass by reference = list,array,sets
 
         Integer[] ages = new Integer[]{100};
@@ -51,6 +55,11 @@ public class Datatypes {
 
     public static void displayFirstElement(Integer[] a){
         System.out.println(a[0]);
+
+    }
+
+    public static void displayAgeInAFancyWay(Integer a){
+        System.out.println("Fancy: " + "a");
 
     }
 }
