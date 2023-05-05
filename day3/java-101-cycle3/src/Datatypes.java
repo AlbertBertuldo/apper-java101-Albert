@@ -32,7 +32,9 @@ public class Datatypes {
 //        pass by value = non primiticve, wrapper
 //        pass by reference = list,array,sets
 
-
+        Integer[] ages = new Integer[]{100};
+        System.out.println(ages[0]);
+        displayFirstElement(ages);
 
         //Changing non int to wrapper
         Integer newage = age;  // age variable will be a wrapper
@@ -45,9 +47,10 @@ public class Datatypes {
         System.out.println(c++ + " " + ++c);
         System.out.println(c);
 
+    }
 
-
-
+    public static void displayFirstElement(Integer[] a){
+        System.out.println(a[0]);
 
     }
 }
