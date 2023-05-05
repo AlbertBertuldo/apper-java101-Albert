@@ -49,7 +49,7 @@ public class Datatypes {
         System.out.println((a + b) * c % 4); // modulo same level with division/multiplicaiton
 
         System.out.println(c++ + " " + ++c);
-        System.out.println(c);
+        System.out.println(c); 
 
     }
 
