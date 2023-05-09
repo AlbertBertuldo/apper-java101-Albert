@@ -21,13 +21,13 @@ public class App {
         manilaToBoracay.addPassengers();
 
         manilaToBoracay.setNumberofSeats(20);
-//        System.out.println(manilaToBoracay.seats);
+        System.out.println(manilaToBoracay.seats);
 
         manilaToBoracay.addPassengers();
         manilaToBoracay.addPassengers();
         manilaToBoracay.addPassengers();
 
-        System.out.println("Current # of available seats: " + manilaToBoracay.seats);
-        System.out.println("Current # of available seats: " + manilaToBoracay.passengers);
+       System.out.println("Current # of available seats: " + manilaToBoracay.getnewseats());
+       System.out.println("Current # of available passengers: " + manilaToBoracay.passengers);
     }
 }
