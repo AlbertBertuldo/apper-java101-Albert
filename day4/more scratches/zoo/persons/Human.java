@@ -5,6 +5,7 @@ public class Human {
     private int age;
 
     public String getName() {
+
         return name;
     }
 
@@ -13,6 +14,7 @@ public class Human {
     }
 
     public int getAge() {
+
         return age;
     }
 
