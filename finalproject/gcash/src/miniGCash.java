@@ -18,9 +18,15 @@ public class miniGCash {
 
 
         while (true) {
+            System.out.println("\n");
             System.out.println("**************************************************************************");
-            System.out.println("````````````````   WELCOME TO miniGCash App! :)   `````````````````````````");
             System.out.println("**************************************************************************");
+            System.out.println("****------------------------------------------------------------------****");
+            System.out.println("****````````````   WELCOME TO miniGCash App! :)   ````````````````````****");
+            System.out.println("****-----------------------------------------------------------------****");
+            System.out.println("**************************************************************************");
+            System.out.println("**************************************************************************");
+            System.out.println("\n");
             System.out.println("Enter 1 to share load, 2 to register a new user, or any other key to exit.");
             String choice = scanner.nextLine();
 
@@ -28,6 +34,9 @@ public class miniGCash {
                 System.out.println("Enter sender's mobile number:");
                 String senderMobile = scanner.nextLine();
 
+                if(senderMobile.length() != 11 || senderMobile.isEmpty()){
+                    System.out.println("Error: Please input valid phone number format");
+                }
                 if (!users.containsKey(senderMobile)) {
                     System.out.println("Error: Sender is not registered.");
                 }
@@ -35,6 +44,9 @@ public class miniGCash {
                 System.out.println("Enter recipient's mobile number:");
                 String recipientMobile = scanner.nextLine();
 
+                if(recipientMobile.length() != 11 || recipientMobile.isEmpty()){
+                    System.out.println("Error: Please input valid phone number format");
+                }
                 if (!users.containsKey(recipientMobile)) {
                     System.out.println("Error: Recipient is not registered.");
                 }
@@ -42,15 +54,25 @@ public class miniGCash {
                 User sender = users.get(senderMobile);
                 User recipient = users.get(recipientMobile);
 
-                System.out.println("Enter amount to share:");
-                double amount = Double.valueOf(scanner.nextLine());
 
                 // SEND LOAD TO RECIPIENT if valid registration
+                if(!users.containsKey(recipientMobile) || !users.containsKey(senderMobile)){
+                    System.out.println("!!!!!!!############ Either Sender's or Recipient's phone number is not yet registered. Please register first before SHARING a load. #######!!!!!!");
+                    System.out.println("\n");
+                }
+                else{
+                    System.out.println("Enter amount to share:");
+                    double amount = Double.valueOf(scanner.nextLine());
+                    sender.shareLoad(recipient, amount);
+                }
 
-                sender.shareLoad(recipient, amount);
             } else if (choice.equals("2")) {
                 System.out.println("Enter new user's mobile number:");
                 String mobile = scanner.nextLine();
+
+                if(mobile.length() != 11){
+                    System.out.println("Error: Please input valid phone number format");
+                }
 
                 if (users.containsKey(mobile)) {
                     System.out.println("Error: Mobile number already exists.");
@@ -77,6 +99,7 @@ public class miniGCash {
             }
         }
 
+        System.out.println("\n");
         System.out.println("All users and their balances:");
         System.out.println("Mobile Number | Name | Balance");
         for (Map.Entry<String, User> entry : users.entrySet()) {
