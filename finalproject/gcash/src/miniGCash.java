@@ -41,6 +41,7 @@ public class miniGCash {
                     System.out.println("Error: Sender is not registered.");
                 }
 
+                System.out.println("\n");
                 System.out.println("Enter recipient's mobile number:");
                 String recipientMobile = scanner.nextLine();
 
@@ -57,6 +58,7 @@ public class miniGCash {
 
                 // SEND LOAD TO RECIPIENT if valid registration
                 if(!users.containsKey(recipientMobile) || !users.containsKey(senderMobile)){
+                    System.out.println("\n");
                     System.out.println("!!!!!!!############ Either Sender's or Recipient's phone number is not yet registered. Please register first before SHARING a load. #######!!!!!!");
                     System.out.println("\n");
                 }
