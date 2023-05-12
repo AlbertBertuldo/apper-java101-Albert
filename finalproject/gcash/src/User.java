@@ -41,7 +41,7 @@ public class User implements Shareable, Loadable {
             System.out.println(amount + " pesos successfully sent to " + recipient.getName() + ".");
         }
     }
-
+ 
 
     public void loadBalance(double amount) {
         this.balance += amount;

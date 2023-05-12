@@ -27,10 +27,12 @@ public class miniGCash {
             System.out.println("**************************************************************************");
             System.out.println("**************************************************************************");
             System.out.println("\n");
-            System.out.println("Enter 1 to share load, 2 to register a new user, or any other key to exit.");
+            System.out.println("Enter 1 to Share Load, 2 to Register a new user, or any other key to exit.");
             String choice = scanner.nextLine();
 
             if (choice.equals("1")) {
+                System.out.println("***********  Share Load  ************");
+                System.out.println("\n");
                 System.out.println("Enter sender's mobile number:");
                 String senderMobile = scanner.nextLine();
 
@@ -69,6 +71,8 @@ public class miniGCash {
                 }
 
             } else if (choice.equals("2")) {
+                System.out.println("***********  Register User  ************");
+                System.out.println("\n");
                 System.out.println("Enter new user's mobile number:");
                 String mobile = scanner.nextLine();
 
