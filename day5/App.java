@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
@@ -10,11 +11,19 @@ public class App {
         cars.put("c4","Vios");
         cars.put("c5","Mitsubishi");
         cars.put("c6","Tesla");
+        cars.put("c7","Tesla");
 
         System.out.println(cars.get("c4"));
         System.out.println(cars.size());
         System.out.println(cars.keySet());
         System.out.println(cars.containsKey("c7"));
-        System.out.println(cars.containsValue("Montero"));
+        System.out.println(cars.containsValue("Montero")); //o(n) based on number of values
+        System.out.println(cars.values());
+
+
+        System.out.println("=====================");
+        Scanner scanner = new Scanner(System.in);
+        String nextDouble = scanner.next();
+        System.out.println(Double.valueOf(nextDouble));
     }
 }
