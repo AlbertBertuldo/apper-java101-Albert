@@ -1,29 +1,21 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) {
-        Map<String, String> cars= new HashMap<>();
-        cars.put("c1","Innova");
-        cars.put("c2","Honda");
-        cars.put("c3","Montero");
-        cars.put("c4","Vios");
-        cars.put("c5","Mitsubishi");
-        cars.put("c6","Tesla");
-        cars.put("c7","Tesla");
+        Cat cat = new Cat();
+        cat.breath();
 
-        System.out.println(cars.get("c4"));
-        System.out.println(cars.size());
-        System.out.println(cars.keySet());
-        System.out.println(cars.containsKey("c7"));
-        System.out.println(cars.containsValue("Montero")); //o(n) based on number of values
-        System.out.println(cars.values());
+        Fish fish = new Fish();
+        fish.breath();
+
+        ForWaterOnly a = new Fish();
+        ForWaterOnly b = new Croc();
+
+        execForWaterOnly(a);
+        execForWaterOnly(b);
 
 
-        System.out.println("=====================");
-        Scanner scanner = new Scanner(System.in);
-        String nextDouble = scanner.next();
-        System.out.println(Double.valueOf(nextDouble));
+    }
+
+    static void execForWaterOnly(ForWaterOnly f){
+        f.swim();
     }
 }
