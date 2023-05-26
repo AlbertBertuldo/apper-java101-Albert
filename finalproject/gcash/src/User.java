@@ -23,10 +23,7 @@ public class User implements Shareable, Loadable {
             System.out.println("Error: Sender and recipient cannot be the same. Please check details and try again.");
         } else if (this.balance < amount) {
             System.out.println("Error: Insufficient balance.");
-        } else if (amount == 0) {
-            System.out.println("Error: amount cannot be 0. Please try again");
-            //<insert code>
-        }
+        } 
         else {
             this.balance -= amount;
             recipient.loadBalance(amount);
