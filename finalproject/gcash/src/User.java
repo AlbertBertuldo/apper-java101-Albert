@@ -1,11 +1,3 @@
-interface Shareable {
-    void shareLoad(User recipient, double amount);
-}
-
-interface Loadable {
-    void loadBalance(double amount);
-}
-
 public class User implements Shareable, Loadable {
     private String name;
     private double balance;
@@ -32,16 +24,16 @@ public class User implements Shareable, Loadable {
         } else if (this.balance < amount) {
             System.out.println("Error: Insufficient balance.");
         } else if (amount == 0) {
-                System.out.println("Error: amount cannot be 0. Please try again");
-                //<insert code>
+            System.out.println("Error: amount cannot be 0. Please try again");
+            //<insert code>
         }
-          else {
+        else {
             this.balance -= amount;
             recipient.loadBalance(amount);
             System.out.println(amount + " pesos successfully sent to " + recipient.getName() + ".");
         }
     }
- 
+
 
     public void loadBalance(double amount) {
         this.balance += amount;

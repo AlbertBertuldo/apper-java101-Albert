@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class miniGCash {
     private static Map<String, User> users = new HashMap<>();
- 
+
     public static void main(String[] args) {
         // Existing users
         users.put("09175861661", new User("Bob", 100.00));
