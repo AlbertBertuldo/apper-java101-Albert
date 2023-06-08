@@ -4,5 +4,7 @@ Quiz.txt
 2. Integration Test - test integrated components. Tested as a combined entity
 3. System Test - checking system's compliance as per requirements
 4. Acceptance Test - usually done by the user, customer or stock.
+5. False
+
 
 
